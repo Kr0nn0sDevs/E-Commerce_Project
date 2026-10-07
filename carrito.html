@@ -11,14 +11,15 @@
   <header>
     <div class="header-inner">
       <a class="logo" href="index.html">Tech<span>Hub</span></a>
-            <nav aria-label="Navegación principal">
+      <nav aria-label="Navegación principal">
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="registro.html">Registro</a></li>
-          <li><a href="nosotras.html">Quiénes somos</a></li>
           <li><a href="catalogo.html">Catálogo</a></li>
-          <li><a href="busqueda.html">Búsqueda</a></li>
-          <li><a href="carrito.html" class="activo">Carrito <span id="cart-counter">(0)</span></a></li>
+          <li><a href="ofertas.html">Ofertas</a></li>
+          <li><a href="nosotras.html">Quiénes somos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="busqueda_productos.html">Búsqueda</a></li>
+          <li><a href="carrito.html" class="activo">Carrito</a></li>
         </ul>
       </nav>
     </div>
@@ -26,10 +27,11 @@
 
   <main>
     <h2>Tu carrito</h2>
+    <p>Cambia las cantidades (solo números) y el total se actualiza al instante.</p>
 
     <p id="carrito-vacio" hidden>Tu carrito está vacío. Visita el <a href="catalogo.html">catálogo</a> para agregar productos.</p>
 
-    <div id="carrito-contenido" hidden>
+    <div id="carrito-contenido">
       <div class="tabla-wrap">
         <table>
           <caption hidden>Productos en el carrito</caption>
@@ -42,7 +44,29 @@
               <th scope="col">Quitar</th>
             </tr>
           </thead>
-          <tbody id="lista-carrito"></tbody>
+          <tbody id="lista-carrito">
+            <tr data-precio="1499">
+              <td><div class="celda-producto"><img class="miniatura" src="img/ssd.svg" alt=""><span>SSD M.2 NVMe 1 TB</span></div></td>
+              <td>$1499.00</td>
+              <td><input type="text" class="cantidad" inputmode="numeric" maxlength="2" value="1" aria-label="Cantidad de SSD M.2 NVMe 1 TB"></td>
+              <td class="subtotal"></td>
+              <td><button type="button" class="btn-quitar">Quitar</button></td>
+            </tr>
+            <tr data-precio="1299">
+              <td><div class="celda-producto"><img class="miniatura" src="img/ram.svg" alt=""><span>Memoria RAM DDR5 16 GB</span></div></td>
+              <td>$1299.00</td>
+              <td><input type="text" class="cantidad" inputmode="numeric" maxlength="2" value="2" aria-label="Cantidad de Memoria RAM DDR5 16 GB"></td>
+              <td class="subtotal"></td>
+              <td><button type="button" class="btn-quitar">Quitar</button></td>
+            </tr>
+            <tr data-precio="1199">
+              <td><div class="celda-producto"><img class="miniatura" src="img/router.svg" alt=""><span>Router Wi-Fi 6 AX3000</span></div></td>
+              <td>$1199.00</td>
+              <td><input type="text" class="cantidad" inputmode="numeric" maxlength="2" value="1" aria-label="Cantidad de Router Wi-Fi 6 AX3000"></td>
+              <td class="subtotal"></td>
+              <td><button type="button" class="btn-quitar">Quitar</button></td>
+            </tr>
+          </tbody>
         </table>
       </div>
 
@@ -57,7 +81,7 @@
 
     <section class="panel" id="compra-ok" hidden>
       <h3>¡Gracias por tu compra!</h3>
-      <p>Esta es una compra simulada para fines escolares.</p>
+      <p>Esta es una compra simulada para fines escolares. No se guardó ningún dato.</p>
     </section>
   </main>
 
@@ -65,7 +89,6 @@
     <p>&copy; 2026 TechHub &mdash; Proyecto escolar de comercio electrónico.</p>
   </footer>
 
-  <script src="js/counter.js"></script>
   <script src="js/carrito.js"></script>
 </body>
 </html>

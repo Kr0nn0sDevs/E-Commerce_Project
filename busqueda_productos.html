@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Busca productos de hardware y electrónica en TechHub.">
+  <title>Búsqueda | TechHub</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="index.html">Tech<span>Hub</span></a>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="ofertas.html">Ofertas</a></li>
+          <li><a href="nosotras.html">Quiénes somos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="busqueda_productos.html" class="activo">Búsqueda</a></li>
+          <li><a href="carrito.html">Carrito</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h2>Búsqueda de productos</h2>
+    <form id="form-busqueda">
+      <label for="texto-busqueda">¿Qué producto buscas?</label>
+      <input type="text" id="texto-busqueda" name="q" placeholder="Ejemplo: routers" autocomplete="off">
+      <button type="submit" class="btn">Buscar</button>
+    </form>
+
+    <section class="panel" id="resultados" aria-live="polite">
+      <p>Escribe un producto y presiona Buscar.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 TechHub &mdash; Proyecto escolar de comercio electrónico.</p>
+  </footer>
+
+  <script src="js/busqueda_productos.js"></script>
+</body>
+</html>

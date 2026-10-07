@@ -11,14 +11,14 @@
   <header>
     <div class="header-inner">
       <a class="logo" href="index.html">Tech<span>Hub</span></a>
-      <nav aria-label="Navegación principal">
+            <nav aria-label="Navegación principal">
         <ul>
           <li><a href="index.html" class="activo">Inicio</a></li>
-          <li><a href="catalogo.html">Catálogo</a></li>
-          <li><a href="ofertas.html">Ofertas</a></li>
+          <li><a href="registro.html">Registro</a></li>
           <li><a href="nosotras.html">Quiénes somos</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="carrito.html">Carrito</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="busqueda.html">Búsqueda</a></li>
+          <li><a href="carrito.html">Carrito <span id="cart-counter">(0)</span></a></li>
         </ul>
       </nav>
     </div>
@@ -35,24 +35,24 @@
       <h2>Categorías destacadas</h2>
       <ul class="categorias">
         <li>
-          <h3>Procesadores</h3>
-          <p>CPUs Intel y AMD para equipos de escritorio y servidores.</p>
+          <a href="catalogo.html?categoria=procesadores" class="cat-link"><h3>Procesadores</h3>
+          <p>CPUs Intel y AMD para equipos de escritorio y servidores.</p></a>
         </li>
         <li>
-          <h3>Almacenamiento</h3>
-          <p>SSD NVMe, discos duros y memorias USB de alta velocidad.</p>
+          <a href="catalogo.html?categoria=almacenamiento" class="cat-link"><h3>Almacenamiento</h3>
+          <p>SSD NVMe, discos duros y memorias USB de alta velocidad.</p></a>
         </li>
         <li>
-          <h3>Redes</h3>
-          <p>Routers, switches, cables UTP y tarjetas Wi-Fi.</p>
+          <a href="catalogo.html?categoria=redes" class="cat-link"><h3>Redes</h3>
+          <p>Routers, switches, cables UTP y tarjetas Wi-Fi.</p></a>
         </li>
         <li>
-          <h3>Periféricos</h3>
-          <p>Teclados, ratones, monitores y webcams.</p>
+          <a href="catalogo.html?categoria=perifericos" class="cat-link"><h3>Periféricos</h3>
+          <p>Teclados, ratones, monitores y webcams.</p></a>
         </li>
         <li>
-          <h3>Microcontroladores</h3>
-          <p>Arduino, ESP32, Raspberry Pi y sensores.</p>
+          <a href="catalogo.html?categoria=microcontroladores" class="cat-link"><h3>Microcontroladores</h3>
+          <p>Arduino, ESP32, Raspberry Pi y sensores.</p></a>
         </li>
       </ul>
     </section>
@@ -61,5 +61,6 @@
   <footer>
     <p>&copy; 2026 TechHub &mdash; Proyecto escolar de comercio electrónico.</p>
   </footer>
+  <script src="js/counter.js"></script>
 </body>
 </html>

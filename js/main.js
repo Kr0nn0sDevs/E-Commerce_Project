@@ -1,4 +1,4 @@
-// Botón interactivo: muestra/oculta la misión
+
 const boton = document.getElementById("btn-mision");
 const mision = document.getElementById("mision");
 

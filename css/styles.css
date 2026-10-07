@@ -1,4 +1,4 @@
-/* ===== Variables ===== */
+
 :root {
   --bg: #0a0e1a;
   --bg-alt: #111830;
@@ -15,7 +15,6 @@
   --mono: "Consolas", "Courier New", monospace;
 }
 
-/* ===== Reset y base ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -35,7 +34,6 @@ p { color: var(--muted); margin-bottom: 1rem; }
 a { color: var(--primary); text-decoration: none; }
 [hidden] { display: none !important; }
 
-/* ===== Cabecera y navegación ===== */
 header {
   background: rgba(10, 14, 26, 0.92);
   border-bottom: 1px solid var(--border);
@@ -72,7 +70,6 @@ nav a:hover, nav a.activo {
   box-shadow: var(--glow);
 }
 
-/* ===== Banner ===== */
 .banner {
   text-align: center;
   padding: 4rem 1.25rem;
@@ -86,7 +83,6 @@ nav a:hover, nav a.activo {
 .banner h1 span { color: var(--neon); }
 .banner p { max-width: 620px; margin: 0 auto 1.5rem; font-size: 1.1rem; }
 
-/* ===== Botones ===== */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.6rem;
@@ -101,7 +97,6 @@ nav a:hover, nav a.activo {
 }
 .btn:hover { background: var(--primary); color: var(--bg); box-shadow: var(--glow); }
 
-/* ===== Categorías (lista ul) ===== */
 .categorias {
   list-style: none;
   display: grid;
@@ -120,7 +115,6 @@ nav a:hover, nav a.activo {
 .categorias h3 { color: var(--text); }
 .categorias p { margin: 0; font-size: 0.92rem; }
 
-/* ===== Tablas ===== */
 .tabla-wrap { overflow-x: auto; margin: 1.25rem 0 2rem; border: 1px solid var(--border); border-radius: var(--radius); }
 table { width: 100%; border-collapse: collapse; background: var(--card); min-width: 520px; }
 th, td { padding: 0.9rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
@@ -128,7 +122,6 @@ th { background: var(--bg-alt); color: var(--primary); font-family: var(--mono);
 tbody tr:hover { background: rgba(0, 212, 255, 0.07); }
 tr:last-child td { border-bottom: none; }
 
-/* ===== Secciones interactivas ===== */
 .panel {
   background: var(--card);
   border: 1px solid var(--neon);
@@ -137,7 +130,6 @@ tr:last-child td { border-bottom: none; }
   margin-top: 1rem;
 }
 
-/* ===== Formularios ===== */
 form { display: grid; gap: 1rem; max-width: 560px; }
 label { color: var(--muted); font-size: 0.9rem; }
 input, select, textarea {
@@ -151,7 +143,6 @@ input, select, textarea {
 }
 input:focus, select:focus, textarea:focus { outline: none; border-color: var(--primary); box-shadow: var(--glow); }
 
-/* ===== Pie de página ===== */
 footer {
   text-align: center;
   padding: 1.5rem 1rem;
@@ -162,14 +153,12 @@ footer {
 }
 footer p { margin: 0; }
 
-/* ===== Responsive ===== */
 @media (max-width: 640px) {
   .header-inner { justify-content: center; }
   nav ul { justify-content: center; }
   .banner { padding: 2.5rem 1rem; }
 }
 
-/* ===== Catálogo ===== */
 .productos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -192,7 +181,6 @@ footer p { margin: 0; }
 .producto-info p { font-size: 0.88rem; margin: 0; }
 .precio { color: var(--neon); font-family: var(--mono); font-size: 1.25rem; font-weight: 700; margin-top: auto; padding-top: 0.5rem; }
 
-/* ===== Carrito ===== */
 .miniatura { width: 72px; height: auto; border-radius: 6px; display: block; }
 .cantidad { width: 80px; text-align: center; }
 .btn-quitar {
@@ -209,3 +197,24 @@ footer p { margin: 0; }
 .resumen { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
 .total { font-family: var(--mono); font-size: 1.5rem; color: var(--neon); }
 .acciones { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+.form-container {
+  max-width: 500px;
+  background: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-top: 1rem;
+}
+.campo { margin-bottom: 1rem; }
+.campo label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
+.campo input { width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; }
+.checkbox-campo { display: flex; align-items: center; gap: 0.5rem; }
+.checkbox-campo input { width: auto; }
+.flex-form { display: flex; gap: 0.5rem; align-items: center; }
+.flex-form input { flex: 1; padding: 0.5rem; margin: 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+.resultados-area { margin-top: 2rem; }
+
+.cat-link { text-decoration: none; color: inherit; display: block; height: 100%; }
+.cat-link:hover h3 { color: var(--primary-color); }

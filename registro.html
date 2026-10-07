@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Regístrate en TechHub.">
+  <title>Registro | TechHub</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="index.html">Tech<span>Hub</span></a>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="registro.html" class="activo">Registro</a></li>
+          <li><a href="nosotras.html">Quiénes somos</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="busqueda.html">Búsqueda</a></li>
+          <li><a href="carrito.html">Carrito <span id="cart-counter">(0)</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h2>Registro de Usuario</h2>
+    <p>Crea tu cuenta en TechHub.</p>
+    <div class="form-container">
+      <form id="form-registro" novalidate>
+        <div class="campo">
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre">
+        </div>
+        <div class="campo">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        </div>
+        <div class="campo">
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" name="password">
+        </div>
+        <div class="campo">
+          <label for="fecha_nac">Fecha de nacimiento:</label>
+          <input type="date" id="fecha_nac" name="fecha_nac">
+        </div>
+        <div class="campo">
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono">
+        </div>
+        <div class="campo checkbox-campo">
+          <input type="checkbox" id="terminos" name="terminos">
+          <label for="terminos">Acepto los términos y condiciones</label>
+        </div>
+        <button type="submit" class="btn" id="btn-submit" disabled>Registrarse</button>
+      </form>
+      <p id="mensaje-registro" aria-live="polite"></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 TechHub &mdash; Proyecto escolar de comercio electrónico.</p>
+  </footer>
+
+  <script src="js/counter.js"></script>
+  <script src="js/registro.js"></script>
+</body>
+</html>

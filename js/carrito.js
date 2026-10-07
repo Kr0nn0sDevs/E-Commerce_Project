@@ -4,11 +4,10 @@ const leerCarrito = () => {
   try { return JSON.parse(localStorage.getItem(CLAVE)) || []; }
   catch { return []; }
 };
-const guardarCarrito = (c) => localStorage.setItem(CLAVE, JSON.stringify(c));
+const guardarCarrito = (c) => { localStorage.setItem(CLAVE, JSON.stringify(c)); if (window.actualizarContador) window.actualizarContador(); };
 const dinero = (n) => n.toLocaleString("es-MX", { style: "currency", currency: "MXN" });
 const esc = (t) => String(t).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
-/* ---------- Catálogo: agregar productos ---------- */
 document.querySelectorAll(".btn-agregar").forEach((btn) => {
   btn.addEventListener("click", () => {
     const carrito = leerCarrito();
@@ -31,7 +30,6 @@ document.querySelectorAll(".btn-agregar").forEach((btn) => {
   });
 });
 
-/* ---------- Carrito: mostrar y modificar ---------- */
 const lista = document.getElementById("lista-carrito");
 
 if (lista) {
@@ -56,6 +54,12 @@ if (lista) {
 
     totalEl.textContent = dinero(carrito.reduce((s, p) => s + p.precio * p.cantidad, 0));
   };
+
+  lista.addEventListener("input", (e) => {
+    if (e.target.classList.contains("cantidad")) {
+      e.target.value = e.target.value.replace(/[^0-9]/g, '');
+    }
+  });
 
   lista.addEventListener("change", (e) => {
     if (!e.target.classList.contains("cantidad")) return;
